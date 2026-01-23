@@ -3,23 +3,21 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Nexus Sportmatch – Early Access</title>
+  <title>Nexus Sportmatch – Hitta sport- och träningspartners i Sverige</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Nexus Sportmatch – matcha med spelare på din nivå och hitta matcher i din stad. Skriv upp dig för att få veta direkt när appen lanseras på iOS & Android."
+    content="Nexus Sportmatch är en modern app för vuxna i Sverige som vill hitta sport- och träningspartners, gå med i events och bygga en trygg träningsgemenskap."
   />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Icons -->
+  <!-- Ikoner -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -34,19 +32,18 @@
     <div class="container header-inner">
       <div class="logo-group">
         <div class="logo-badge">
-          <!-- Byt filen till er nya logga (behåll namnet logo.png om du vill) -->
-          <img src="logo.png" alt="Nexus Sportmatch logo" />
+          <img src="NexussportmatchLOGO.PNG" alt="Nexus Sportmatch logo" />
         </div>
         <div class="logo-text">
           <span class="logo-title">Nexus Sportmatch</span>
-          <span class="logo-tagline">Match · Play · Repeat</span>
+          <span class="logo-tagline">Adult Sports Community</span>
         </div>
       </div>
 
       <nav class="main-nav">
         <a href="#features">Funktioner</a>
-        <a href="#how">Så funkar det</a>
-        <a href="#signup">Early access</a>
+        <a href="#how-it-works">Så funkar det</a>
+        <a href="#screens">Appen</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -57,7 +54,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO  -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-curves"></div>
@@ -69,32 +66,31 @@
           <div class="hero-content">
             <div class="pill pill-soft">
               <span class="pill-dot"></span>
-              Matcha med spelare – inte dejta
+              Appen för vuxna som vill träna mer – inte dejta
             </div>
 
             <h1>
-              Hitta spelare och matcher<br />
+              Hitta sport- och träningspartners<br />
               <span class="accent">i din stad.</span>
             </h1>
 
             <p class="hero-subtitle">
-              Nexus Sportmatch matchar dig med rätt personer baserat på sport, nivå och tillgänglighet.
-              Gå med i events eller skapa egna — snabbt och enkelt.
+              Nexus Sportmatch matchar vuxna i Sverige med rätt träningspartners och events. Fokuserat på 30+ – med extra fokus på 35+.
             </p>
 
             <div class="hero-cta-row">
-              <a href="#signup" class="btn btn-primary">
+              <a href="#early-access" class="btn btn-primary">
                 <i class="fa-solid fa-bolt"></i>
                 <span>
                   <small>Få försprång</small>
-                  Skriv upp dig
+                  Early Access
                 </span>
               </a>
-              <a href="#how" class="btn btn-ghost">
-                <i class="fa-solid fa-circle-play"></i>
+              <a href="#" class="btn btn-ghost" onclick="return false;">
+                <i class="fa-brands fa-google-play"></i>
                 <span>
-                  <small>Se</small>
-                  Så funkar det
+                  <small>Kommer snart på</small>
+                  Google Play
                 </span>
               </a>
             </div>
@@ -102,62 +98,32 @@
             <div class="hero-meta-row">
               <div class="hero-meta-item">
                 <i class="fa-solid fa-users"></i>
-                <span>Matchning efter sport, nivå och stad</span>
+                <span>Designad för vuxna 30+ i Sverige</span>
               </div>
               <div class="hero-meta-item">
                 <i class="fa-solid fa-calendar-day"></i>
-                <span>Events, grupper och 1-1 matcher</span>
+                <span>Padel, gym, promenader, grupppass m.m.</span>
               </div>
-            </div>
-
-            <div class="hero-note">
-              <i class="fa-solid fa-mobile-screen"></i>
-              <span>Lanseras snart på <strong>iOS & Android</strong>. Early access-listan är öppen nu.</span>
             </div>
           </div>
 
-          <!-- VISUAL -->
+          <!-- MOCKUPS -->
           <div class="hero-mockups">
-            <div class="card-visual float-up">
-              <div class="visual-top">
-                <span class="chip">Stockholm</span>
-                <span class="chip chip-soft">Padel · Level 4</span>
-              </div>
-
-              <div class="visual-title">
-                <strong>Hitta match på 30 sek</strong>
-                <span>Matcha med spelare nära dig</span>
-              </div>
-
-              <div class="visual-stats">
-                <div class="mini">
-                  <span class="mini-label">Matchar idag</span>
-                  <span class="mini-value" id="statMatches">12</span>
-                </div>
-                <div class="mini">
-                  <span class="mini-label">Aktiva städer</span>
-                  <span class="mini-value">Sverige</span>
-                </div>
-                <div class="mini">
-                  <span class="mini-label">Lansering</span>
-                  <span class="mini-value">2026</span>
-                </div>
-              </div>
-
-              <div class="visual-cta">
-                <a href="#signup" class="btn btn-mini">
-                  <i class="fa-solid fa-envelope"></i>
-                  <span>Skriv upp dig</span>
-                </a>
-                <span class="muted">Gratis att signa upp</span>
-              </div>
+            <div class="phone phone-main float-up">
+              <img src="onboarding.png" alt="Nexus Sportmatch onboarding" />
+            </div>
+            <div class="phone phone-secondary phone-left float-soft">
+              <img src="sports.png" alt="Nexus Sportmatch sports selection" />
+            </div>
+            <div class="phone phone-secondary phone-right float-soft-delayed">
+              <img src="events.png" alt="Nexus Sportmatch events list" />
             </div>
 
             <div class="floating-badge">
               <span class="badge-icon">⚡</span>
               <div class="badge-text">
-                <strong>Ny match nära dig</strong>
-                <span>Sport · Nivå · Tid</span>
+                <strong>12 aktiva matcher nära dig</strong>
+                <span>Stockholm · Göteborg · Malmö</span>
               </div>
             </div>
           </div>
@@ -167,16 +133,16 @@
       <!-- mini stats under hero -->
       <div class="hero-stats">
         <div class="stat-pill">
-          <span class="stat-label">För vem?</span>
-          <span class="stat-value">Alla nivåer – nybörjare till avancerad</span>
+          <span class="stat-label">Målgrupp</span>
+          <span class="stat-value">Vuxna 30–65 år</span>
         </div>
         <div class="stat-pill">
           <span class="stat-label">Fokus</span>
-          <span class="stat-value">Spela mer sport, mindre planering</span>
+          <span class="stat-value">Träning, hälsa & gemenskap</span>
         </div>
         <div class="stat-pill">
-          <span class="stat-label">Early access</span>
-          <span class="stat-value">Få besked direkt vid release</span>
+          <span class="stat-label">Lansering</span>
+          <span class="stat-value">Beta 2026 – early access nu</span>
         </div>
       </div>
     </div>
@@ -187,227 +153,260 @@
     <div class="container">
       <div class="section-header">
         <h2>Varför Nexus Sportmatch?</h2>
-        <p>För dig som vill hitta spelare snabbt, matchas smart och faktiskt komma ut och spela.</p>
+        <p>En plattform för dig som vill träna mer, hitta rätt sällskap och känna dig trygg när du gör det.</p>
       </div>
 
       <div class="feature-grid">
         <article class="feature-card">
           <span class="feature-icon"><i class="fa-solid fa-location-dot"></i></span>
-          <h3>Spelare nära dig</h3>
-          <p>Matcha med personer i din stad som gillar samma sport och nivå.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon"><i class="fa-solid fa-sliders"></i></span>
-          <h3>Nivå & tillgänglighet</h3>
-          <p>Ställ in nivå och dagar – få bättre matcher som faktiskt funkar.</p>
+          <h3>Hitta partners nära dig</h3>
+          <p>Matchas med personer i din stad som gillar samma sporter och nivå som du.</p>
         </article>
         <article class="feature-card">
           <span class="feature-icon"><i class="fa-solid fa-calendar-check"></i></span>
-          <h3>Events & grupper</h3>
-          <p>Gå med i events eller skapa egna. Community som driver dig framåt.</p>
+          <h3>Events & grupppass</h3>
+          <p>Bläddra bland padelmatcher, promenader, gympass och mer. Boka plats med ett tryck.</p>
         </article>
         <article class="feature-card">
           <span class="feature-icon"><i class="fa-solid fa-user-shield"></i></span>
-          <h3>Tryggt & enkelt</h3>
-          <p>Rapportera/blockera vid behov. Fokus på sport, respekt och kvalitet.</p>
+          <h3>Trygg community</h3>
+          <p>Verifierade profiler, rapportera/blockera-funktioner och tydliga riktlinjer.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon"><i class="fa-solid fa-dumbbell"></i></span>
+          <h3>Coacher & nivåer</h3>
+          <p>Följ coacher, sätt nivå (nybörjare till entusiast/pro) och följ din utveckling.</p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="how" class="section">
+  <section id="how-it-works" class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Så funkar det</h2>
-        <p>Från onboarding till match – på några minuter.</p>
+        <h2>Så funkar appen</h2>
+        <p>Från första onboarding till att boka din plats på ett event – på bara några minuter.</p>
       </div>
 
       <div class="steps-layout">
         <div class="steps-card">
-          <div class="steps-list">
+          <div class="steps-tabs">
+            <button class="steps-tab steps-tab-active" data-tab="partner" type="button">Hitta partner</button>
+            <button class="steps-tab" data-tab="event" type="button">Skapa event</button>
+          </div>
+
+          <div class="steps-list" data-panel="partner">
             <div class="step-item">
               <span class="step-number">1</span>
               <div>
-                <h3>Välj sport & nivå</h3>
-                <p>Padel, gym, löpning, tennis och mer. Du väljer nivån.</p>
+                <h3>Skapa din profil</h3>
+                <p>Registrera dig och välj om du är användare eller tränare.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-number">2</span>
               <div>
-                <h3>Matchas med rätt personer</h3>
-                <p>Vi föreslår spelare baserat på sport, nivå och tillgänglighet.</p>
+                <h3>Välj sporter & nivå</h3>
+                <p>Padel, gym, tennis, yoga m.m. Ställ in nivå från nybörjare till entusiast.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-number">3</span>
               <div>
-                <h3>Chatta & bestäm tid</h3>
-                <p>När ni matchar kan ni chatta och planera direkt.</p>
+                <h3>Sätt din tillgänglighet</h3>
+                <p>Välj vilka dagar och tider som brukar funka för dig.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-number">4</span>
               <div>
-                <h3>Spela – repeat</h3>
-                <p>Bygg rutin via återkommande matcher och events.</p>
+                <h3>Matchas & kom igång</h3>
+                <p>Upptäck personer och grupper nära dig och börja boka pass tillsammans.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps-list hidden" data-panel="event">
+            <div class="step-item">
+              <span class="step-number">1</span>
+              <div>
+                <h3>Skapa ditt event</h3>
+                <p>Välj sport, plats, datum och hur många deltagare du vill ha.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-number">2</span>
+              <div>
+                <h3>Bestäm nivå & målgrupp</h3>
+                <p>Markera nivå (t.ex. mixad motion) och åldersspann om du vill.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-number">3</span>
+              <div>
+                <h3>Dela med communityt</h3>
+                <p>Ditt event dyker upp i feeden där andra kan boka en plats.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-number">4</span>
+              <div>
+                <h3>Följ upp & skapa vana</h3>
+                <p>Få återkommande grupper och gör träning till en social rutin.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="steps-aside">
-          <div class="aside-card">
-            <h3>Kommer vid launch</h3>
-            <ul>
-              <li>iOS & Android</li>
-              <li>Matchning + chat</li>
-              <li>Events + grupper</li>
-              <li>Coach-profiler (valfritt)</li>
-            </ul>
-            <a href="#signup" class="btn btn-ghost btn-wide">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Skriv upp dig</span>
-            </a>
+        <div class="steps-mockup">
+          <div class="phone">
+            <img src="skill-level.png" alt="Nexus Sportmatch skill level" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SIGNUP -->
-  <section id="signup" class="section section-light">
+  <!-- SCREENS -->
+  <section id="screens" class="section section-light">
     <div class="container">
       <div class="section-header">
-        <h2>Early access</h2>
-        <p>Skriv in din e-post så får du veta direkt när Nexus Sportmatch lanseras på iOS & Android.</p>
+        <h2>En titt i appen</h2>
+        <p>De här skärmarna är från en tidig version – UI:t kommer fortsätta slipas innan lansering.</p>
       </div>
 
-      <div class="signup-card">
-        <form id="signupForm" class="signup-form" novalidate>
-          <label class="field">
-            <span class="field-label">E-post</span>
-            <input
-              id="emailInput"
-              type="email"
-              name="email"
-              placeholder="dinmail@exempel.com"
-              autocomplete="email"
-              required
-            />
-          </label>
+      <div class="screen-row">
+        <div class="screen-card">
+          <div class="phone phone-small">
+            <img src="auth.png" alt="Skapa konto i Nexus Sportmatch" />
+          </div>
+          <h3>Skapa konto</h3>
+          <p>Registrera dig, välj kontotyp och godkänn villkor – klart på under en minut.</p>
+        </div>
+        <div class="screen-card">
+          <div class="phone phone-small">
+            <img src="sports.png" alt="Välj sporter i Nexus Sportmatch" />
+          </div>
+          <h3>Välj sporter</h3>
+          <p>Markera dina favoritaktiviteter – från padel och gym till yoga och cykling.</p>
+        </div>
+        <div class="screen-card">
+          <div class="phone phone-small">
+            <img src="availability.png" alt="Tillgänglighet i Nexus Sportmatch" />
+          </div>
+          <h3>Din tillgänglighet</h3>
+          <p>Välj vilka dagar du oftast kan träna, så gör vi matchningen smartare.</p>
+        </div>
+        <div class="screen-card">
+          <div class="phone phone-small">
+            <img src="events.png" alt="Event & pass i Nexus Sportmatch" />
+          </div>
+          <h3>Event & pass</h3>
+          <p>Bläddra bland kommande aktiviteter och boka plats direkt i appen.</p>
+        </div>
+        <div class="screen-card">
+          <div class="phone phone-small">
+            <img src="profile.png" alt="Profil och aktivitet i Nexus Sportmatch" />
+          </div>
+          <h3>Profil & statistik</h3>
+          <p>Följ din aktivitet, matcher och historik – och bygg din egen träningsresa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <button class="btn btn-primary btn-submit" type="submit">
-            <i class="fa-solid fa-bolt"></i>
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Röster från målgruppen</h2>
+        <p>Fiktiva citat nu – ersätts av riktiga användare när ni lanserar.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <p class="quote">
+            “Jag har länge velat hitta en padelpartner i min ålder. Nexus Sportmatch är första appen som känns gjord för just oss.”
+          </p>
+          <div class="person">
+            <div class="avatar-placeholder">L</div>
+            <div>
+              <strong>Lars, 42</strong>
+              <span>Stockholm</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p class="quote">
+            “Som nyinflyttad till Malmö var det här perfekt. Jag vill träna, inte dejta – och den känslan har de verkligen nailat.”
+          </p>
+          <div class="person">
+            <div class="avatar-placeholder">A</div>
+            <div>
+              <strong>Anna, 39</strong>
+              <span>Malmö</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p class="quote">
+            “Jag gillar att allt känns tryggt: verifiering, tydliga regler och möjlighet att blockera. Det gör tröskeln lägre att testa.”
+          </p>
+          <div class="person">
+            <div class="avatar-placeholder">J</div>
+            <div>
+              <strong>Johan, 47</strong>
+              <span>Uppsala</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EARLY ACCESS (FUNGERAR) -->
+  <section id="early-access" class="section section-cta">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Vill du vara med från start?</h2>
+        <p>Nexus Sportmatch lanseras stegvis under 2026. Skriv upp dig så får du besked direkt vid release.</p>
+        <p class="cta-small">Antal på listan (på din dator): <strong id="waitlistCount">0</strong></p>
+      </div>
+
+      <div class="cta-actions">
+        <form id="waitlistForm" class="waitlist-form" novalidate>
+          <input
+            id="waitlistEmail"
+            type="email"
+            placeholder="dinmail@exempel.com"
+            autocomplete="email"
+            required
+          />
+          <button class="btn btn-primary" type="submit">
+            <i class="fa-solid fa-envelope"></i>
             <span>
-              <small>Få försprång</small>
+              <small>Early access</small>
               Skriv upp mig
             </span>
           </button>
-
-          <p class="fineprint">
-            Genom att skriva upp dig godkänner du att vi mejlar dig när appen lanseras.
-            <span class="dot">•</span>
-            Inga spam.
-          </p>
-
-          <div id="formMsg" class="form-msg" aria-live="polite"></div>
+          <div id="waitlistMsg" class="waitlist-msg" aria-live="polite"></div>
         </form>
-
-        <div class="signup-side">
-          <div class="signup-side-card">
-            <h3>Vad du får</h3>
-            <ul>
-              <li>Först att få besked vid release</li>
-              <li>Chans till beta-invite</li>
-              <li>Exklusiva launch-uppdateringar</li>
-            </ul>
-            <div class="count">
-              <span class="count-label">Antal i listan (demo)</span>
-              <span class="count-value" id="subCount">0</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>FAQ</h2>
-        <p>Snabba svar innan lansering.</p>
-      </div>
-
-      <div class="faq-layout">
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Är Nexus Sportmatch en dejtingapp?
-              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-            </button>
-            <div class="faq-answer">
-              <p>Nej. Fokus är sport, matchning och community – inte dejting.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Kommer appen vara gratis?
-              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-            </button>
-            <div class="faq-answer">
-              <p>Ja, du kan komma igång gratis. Premium kan finnas för extra features senare.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              När lanserar ni?
-              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-            </button>
-            <div class="faq-answer">
-              <p>Planen är 2026. Skriv upp dig så får du besked direkt när vi släpper.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              Vilka sporter finns?
-              <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-            </button>
-            <div class="faq-answer">
-              <p>Vi startar med de vanligaste och expanderar snabbt baserat på efterfrågan.</p>
-            </div>
-          </div>
-        </div>
-
-        <aside class="faq-aside">
-          <h3>Tips</h3>
-          <p>Vill du ha fler signups? Skriv en tydlig hook högst upp + en enda CTA: “Skriv upp dig”.</p>
-          <a href="#signup" class="btn btn-primary btn-wide">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Skriv upp dig</span>
-          </a>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
         <span class="footer-logo">Nexus Sportmatch</span>
-        <span class="footer-copy">© <span id="year"></span> Nexus Sportmatch.</span>
+        <span class="footer-copy">© <span id="year"></span> Nexus Sportmatch. Alla rättigheter förbehållna.</span>
       </div>
       <div class="footer-links">
-        <a href="#signup">Early access</a>
-        <a href="#" onclick="return false;">Integritet</a>
-        <a href="#" onclick="return false;">Villkor</a>
-        <a href="#" onclick="return false;">Kontakt</a>
+        <a href="#" onclick="return false;">Om oss</a>
+        <a href="#" onclick="return false;">Integritetspolicy</a>
+        <a href="#" onclick="return false;">Användarvillkor</a>
+        <a href="#early-access">Early access</a>
       </div>
     </div>
   </footer>
