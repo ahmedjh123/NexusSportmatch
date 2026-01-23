@@ -1,6 +1,6 @@
 // script.js
 
-// 1) FAQ accordion
+// FAQ accordion
 document.querySelectorAll(".faq-item").forEach((item) => {
   const btn = item.querySelector(".faq-question");
   btn.addEventListener("click", () => {
@@ -10,27 +10,40 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// 2) År i footer
+// Steps tabs (Hitta partner / Skapa event)
+const tabs = document.querySelectorAll(".steps-tab");
+const panels = document.querySelectorAll(".steps-list[data-panel]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.getAttribute("data-tab");
+
+    tabs.forEach((t) => t.classList.remove("steps-tab-active"));
+    tab.classList.add("steps-tab-active");
+
+    panels.forEach((panel) => {
+      if (panel.getAttribute("data-panel") === target) {
+        panel.classList.remove("hidden");
+      } else {
+        panel.classList.add("hidden");
+      }
+    });
+  });
+});
+
+// År i footern
 const yearSpan = document.getElementById("year");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// 3) Demo-stat i hero (valfritt)
-const statMatches = document.getElementById("statMatches");
-if (statMatches) {
-  const base = 12;
-  const jitter = Math.floor(Math.random() * 6); // 0-5
-  statMatches.textContent = String(base + jitter);
-}
+// ------------------------
+// EARLY ACCESS (FUNGERAR)
+// ------------------------
+const form = document.getElementById("waitlistForm");
+const input = document.getElementById("waitlistEmail");
+const msg = document.getElementById("waitlistMsg");
+const countEl = document.getElementById("waitlistCount");
 
-// 4) Email signup (ingen mailto)
-// OBS: Detta sparar i localStorage för DEMO.
-// När ni är redo kopplar vi till Brevo/Mailchimp/MailerLite via API eller form-endpoint.
-const form = document.getElementById("signupForm");
-const emailInput = document.getElementById("emailInput");
-const msg = document.getElementById("formMsg");
-const subCount = document.getElementById("subCount");
-
-function getList() {
+function loadWaitlist() {
   try {
     return JSON.parse(localStorage.getItem("nexus_waitlist") || "[]");
   } catch {
@@ -38,14 +51,8 @@ function getList() {
   }
 }
 
-function setList(list) {
+function saveWaitlist(list) {
   localStorage.setItem("nexus_waitlist", JSON.stringify(list));
-}
-
-function updateCount() {
-  if (!subCount) return;
-  const list = getList();
-  subCount.textContent = String(list.length);
 }
 
 function setMsg(text, type) {
@@ -55,6 +62,11 @@ function setMsg(text, type) {
   if (type) msg.classList.add(type);
 }
 
+function updateCount() {
+  if (!countEl) return;
+  countEl.textContent = String(loadWaitlist().length);
+}
+
 function isValidEmail(v) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v || "").trim());
 }
@@ -62,35 +74,32 @@ function isValidEmail(v) {
 updateCount();
 
 if (form) {
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const email = String(emailInput?.value || "").trim().toLowerCase();
+    const email = String(input?.value || "").trim().toLowerCase();
 
     if (!isValidEmail(email)) {
       setMsg("Skriv en giltig e-postadress.", "err");
       return;
     }
 
-    const list = getList();
+    const list = loadWaitlist();
 
     if (list.includes(email)) {
       setMsg("Du är redan med på listan ✅", "ok");
       return;
     }
 
-    // DEMO: spara lokalt
     list.push(email);
-    setList(list);
+    saveWaitlist(list);
     updateCount();
 
-    // UI
-    setMsg("Klart! Du får besked direkt när vi lanserar 🚀", "ok");
-    if (emailInput) emailInput.value = "";
+    setMsg("Klart! Du får besked direkt när appen lanseras 🚀", "ok");
+    if (input) input.value = "";
 
-    // ✅ NÄR NI KOPPLAR RIKTIG LISTA:
-    // 1) Brevo/Mailchimp endpoint eller egen backend
-    // await fetch("https://din-backend.se/api/waitlist", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ email }) });
+    // När ni vill att det ska “funka på riktigt” (inte bara på din dator),
+    // kopplar vi detta till en gratis backend/Google Sheet/Brevo.
   });
 }
 
